@@ -25,7 +25,7 @@ ollama show mistral-small3.1
 
 You are supposed to see `tools` listed under capabilities.
 
-You can also look at the template the model is using and tweak it based on your needs.
+You can also look at the model's template and tweak it based on your needs.
 
 ```bash
 ollama show --modelfile llama3.1 > model_file_to_modify
@@ -70,7 +70,7 @@ adk web
 
 ## Using openai provider
 
-Alternatively, `openai` can be used as the provider name. But this will also require setting the  `OPENAI_API_BASE=http://localhost:11434/v1` and `OPENAI_API_KEY=anything` env variables instead of `OLLAMA_API_BASE`. **Please notice that api base now has `/v1` at the end.**
+Alternatively, `openai` can be used as the provider name. But this will also require setting the `OPENAI_API_BASE=http://localhost:11434/v1` and `OPENAI_API_KEY=anything` env variables instead of `OLLAMA_API_BASE`. **Please notice that api base now has `/v1` at the end.**
 
 ```py
 root_agent = Agent(

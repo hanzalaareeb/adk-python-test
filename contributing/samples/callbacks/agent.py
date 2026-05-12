@@ -1,4 +1,4 @@
-# Copyright 2025 Google LLC
+# Copyright 2026 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,8 +15,8 @@
 import random
 
 from google.adk import Agent
-from google.adk.planners import BuiltInPlanner
-from google.adk.planners import PlanReActPlanner
+from google.adk.planners.built_in_planner import BuiltInPlanner
+from google.adk.planners.plan_re_act_planner import PlanReActPlanner
 from google.adk.tools.tool_context import ToolContext
 from google.genai import types
 
@@ -145,7 +145,7 @@ def after_tool_cb3(tool, args, tool_context, tool_response):
 
 
 root_agent = Agent(
-    model='gemini-2.0-flash',
+    model='gemini-2.5-flash',
     name='data_processing_agent',
     description=(
         'hello world agent that can roll a dice of 8 sides and check prime'

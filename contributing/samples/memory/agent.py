@@ -1,4 +1,4 @@
-# Copyright 2025 Google LLC
+# Copyright 2026 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -26,7 +26,7 @@ def update_current_time(callback_context: CallbackContext):
 
 
 root_agent = Agent(
-    model='gemini-2.0-flash-001',
+    model='gemini-2.5-flash',
     name='memory_agent',
     description='agent that have access to memory tools.',
     before_agent_callback=update_current_time,

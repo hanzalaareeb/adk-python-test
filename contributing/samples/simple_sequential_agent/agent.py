@@ -1,4 +1,4 @@
-# Copyright 2025 Google LLC
+# Copyright 2026 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ def roll_die(sides: int) -> int:
 roll_agent = LlmAgent(
     name="roll_agent",
     description="Handles rolling dice of different sizes.",
-    model="gemini-2.0-flash",
+    model="gemini-2.5-flash",
     instruction="""
       You are responsible for rolling dice based on the user's request.
       When asked to roll a die, you must call the roll_die tool with the number of sides as an integer.
@@ -69,7 +69,7 @@ def check_prime(nums: list[int]) -> str:
 prime_agent = LlmAgent(
     name="prime_agent",
     description="Handles checking if numbers are prime.",
-    model="gemini-2.0-flash",
+    model="gemini-2.5-flash",
     instruction="""
       You are responsible for checking whether numbers are prime.
       When asked to check primes, you must call the check_prime tool with a list of integers.
@@ -88,7 +88,7 @@ prime_agent = LlmAgent(
 )
 
 root_agent = SequentialAgent(
-    name="code_pipeline_agent",
+    name="simple_sequential_agent",
     sub_agents=[roll_agent, prime_agent],
     # The agents will run in the order provided: roll_agent -> prime_agent
 )
